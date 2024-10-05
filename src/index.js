@@ -8,6 +8,10 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector("#current-temperature");
   let temperature = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#current-city");
+  let display = document.querySelector(".current-weather");
+  display.classList.add("current-weather-display");
+  
+
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
 
